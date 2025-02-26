@@ -1,0 +1,101 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <!-- Add Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+<style>
+    #barChart {
+        max-width: 800px;
+        max-height: 500px;
+    }
+</style>
+</head>
+
+<body>
+    <h1>Result</h1>
+    <p>Location: {{ location }}</p>
+    <p>Year: {{ year }}</p>
+    <p>Month: {{ month }}</p>
+    <p>Predicted Value: {{ predicted_value }}</p>
+
+    <!-- Bar Chart Container -->
+    <canvas id="barChart" width="400" height="400"></canvas>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const ctx = document.getElementById('barChart').getContext('2d');
+            const month = '{{ month }}';
+            const predicted_value = {{ predicted_value }};
+
+            let data;
+            if (month === 'January') {
+                data = [5.1, 19.2, 26.2, 53.2, 2.2, predicted_value];
+            } else if (month === 'February') {
+                data = [2.8, 0.1, 34.4, 16.1, 0.5, predicted_value];
+            } else if (month === 'March') {
+                data = [3.1, 1.6, 37.5, 4.4, 3.7, predicted_value];
+            } else if (month === 'April') {
+                data = [85.9, 76.8, 5.3, 14.9, 87.1, predicted_value];
+            } else if (month === 'May') {
+                data = [107.2, 21.2, 88.3, 57.4, 133.1, predicted_value];
+            } else if (month === 'June') {
+                data = [153.6, 327, 426.2, 244.1, 296.6, predicted_value];
+            } else if (month === 'July') {
+                data = [350.2, 231.5, 296.4, 116.1, 257.5, predicted_value];
+            } else if (month === 'August') {
+                data = [254, 381.2, 154.4, 466.1, 146.4, predicted_value];
+            } else if (month === 'September') {
+                data = [255.2, 179.8, 180, 132.2, 160.4, predicted_value];
+            } else if (month === 'October') {
+                data = [117.4, 145.9, 72.8, 169.2, 165.4, predicted_value];
+            } else if (month === 'November') {
+                data = [184.3, 12.4, 78.1, 59, 231, predicted_value];
+            } else if (month === 'December') {
+                data = [14.9, 8.8, 26.7, 62.3, 159, predicted_value];
+            } else {
+                data = [];
+            }
+
+            const myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['1921-1940', '1941-1960', '1961-1980', '1981-2000', '2000-2015', '{{ year }}'],
+                    datasets: [{
+                        label: 'Rainfall (mm)',
+                        data: data,
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>

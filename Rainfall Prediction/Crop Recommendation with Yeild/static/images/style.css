@@ -1,0 +1,306 @@
+body{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+    z-index: -1;
+    object-fit: cover;
+    background: #a8c0ff; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #a8c0ff, #3f2b96); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #a8c0ff, #3f2b96);
+}
+
+
+.weather-container{
+    width: 80%;
+    height: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    z-index: 1;
+    border-radius: 10px;
+    display: grid;
+    grid-template-areas: 
+            "search search search"
+            "today today forecast"
+            "today today forecast"
+            "today today forecast"
+            "today today forecast"
+            "today today forecast";
+
+    row-gap: 16px;
+    column-gap: 16px;
+    padding: 16px;
+}
+
+#search{
+    grid-area: search;
+}
+
+#today{
+    grid-area: today;
+}
+
+#forecast{
+    grid-area: forecast;
+}
+
+.searchbar{
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.name{
+    color: white;
+    padding: 0 0 0 5px;
+    margin: 0;
+}
+
+.name h1{
+    padding: 0;
+    margin: 0;
+}
+
+.search-space{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-field input{
+    width: 250px;
+    height: 40px;
+    border: none;
+    border-radius: 9999px;
+    /* padding-left: 25%; */
+    outline: none;
+    margin-right: 20px;
+    box-sizing: border-box;
+    padding:0 30px;
+    font-size: 1rem;
+}
+
+.search-button button{
+    height:40px;
+    width: 100px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 9999px;
+    outline: none;
+    background-color: #EEF;
+    cursor: pointer;
+}
+
+.weather-today{
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    color: #EFF;
+    position: relative;
+}
+
+
+.weather--today-data{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 30px;
+}
+
+.text-data .city h1 span{
+    font-size: 0.8rem;
+}
+
+.text-data .temp h1 span{
+    font-size: 0.8rem;
+}
+
+.weather--today-data .image-data img{
+    width: 100px;
+    height: 100px;
+}
+
+.weather--today-data .image-data img{
+    width: 100px;
+    height: 100px;
+}
+
+.min-max-temp{
+    margin: 0;
+    padding: 0;
+    /* line-height: 1rem; */
+    padding: 0 20px 0 0;
+}
+
+.weather--today-day{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 30px;
+}
+
+
+.weather--today-day .day-time img{
+    height: 45px;
+    width: 45px;
+    margin: 5px 0;
+}
+
+.weather--today-day .day-time p{
+    margin: 0;
+    padding: 0;
+}
+
+.data-display{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px 40px;
+}
+
+.data-display .condition{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.data-display .condition .air-conditions{
+    padding: 10px 20px;
+}
+
+.data-display .condition .air-conditions h3{
+    margin: 0;
+    padding: 0;
+}
+
+.data-display .condition .air-conditions .head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.data-display .condition .air-conditions .head img{
+    width: 20px;
+    height: 20px;
+}
+
+.data-display .condition .air-conditions .head p{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+
+.weather-forcast{
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.weather-forcast .header{
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+.weather-forcast .days{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.days .day{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    /* padding: 0 20px; */
+}
+
+.days .day .day-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* Distribute available space equally among all day labels */
+    text-align: center;
+}
+
+
+.days .day .day-icons img{
+    width: 20px;
+    height: 20px;
+}
+
+.days .day p {
+    flex: 1; /* Distribute available space equally among all day labels */
+    text-align: center; /* Center-align the day labels */
+    font-size: 0.8rem;
+}
+
+.days .day .day-icons p{
+    font-size: 1.1rem;
+}
+
+.spinner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner .spin{
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    border-right-color: rgba(0, 0, 0, 0.9);
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin{
+    100%{
+        transform: rotate(360deg);
+    }
+}

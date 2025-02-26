@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- <script type="module" src="JS/new-wave.js"></script> -->
+    <!-- <script type="module" src="JS/controller.js"></script> -->
+</head>
+
+<body>
+    <div class="video-container">
+        <!-- <video autoplay muted loop id="video-background">
+            <source src="waves-animation.mov" type="video/mp4">
+        </video> -->
+        <!-- Your other HTML content goes here -->
+    </div>
+
+    <div class="weather-container">
+        <div class="searchbar" id="search">
+            <div class="name">
+                <h1>WeatherVibes</h1>
+            </div>
+            <div class="search-space">
+                <div class="search-field">
+                    <input type="text" placeholder="Enter City" class="input-city">
+                </div>
+                <div class="search-button">
+                    <button class="search-city">Search</button>
+                </div>
+            </div>
+        </div>
+        <div class="weather-today" id="today">
+            <div class="weather--today-data">
+                <div class="text-data">
+                    <div class="city">
+                        <h1>Mumbai <span>SAT</span></h1>
+                    </div>
+                    <div class="temp">
+                        <h1>31&deg;C <span> &nbsp;&nbsp;clear</span></h1>
+                    </div>
+                </div>
+                <div class="image-data">
+                    <img src="images/day-clear.png" alt="">
+                </div>
+                <div class="min-max-temp">
+                    <h4>min temp :&nbsp;&nbsp; 27&deg;C</h4>
+                    <h4>max temp :&nbsp;&nbsp; 33&deg;C</h4>
+                </div>
+
+            </div>
+
+
+            <div class="weather--today-day">
+                <div class="day-time">
+                    <p>6:00 AM</p>
+                    <img src="images/day-clear.png" alt="">
+                    <p>23&deg;C</p>
+                </div>
+                <div class="day-time">
+                    <p>9:00 AM</p>
+                    <img src="images/day-clear.png" alt="">
+                    <p>27&deg;C</p>
+                </div>
+                <div class="day-time">
+                    <p>12:00 PM</p>
+                    <img src="images/day-clear.png" alt="">
+                    <p>30&deg;C</p>
+                </div>
+                <div class="day-time">
+                    <p>3:00 PM</p>
+                    <img src="images/day-clear.png" alt="">
+                    <p>29&deg;C</p>
+                </div>
+                <div class="day-time">
+                    <p>6:00 PM</p>
+                    <img src="images/day-clear.png" alt="">
+                    <p>27&deg;C</p>
+                </div>
+                <div class="day-time">
+                    <p>9:00 PM</p>
+                    <img src="images/day-clear.png" alt="">
+                    <p>23&deg;C</p>
+                </div>
+            </div>
+
+            <div class="data-display">
+                <div class="condition">
+                    <div class="air-conditions">
+                        <div class="head">
+                            <img src="images/temperature.png" alt="">
+                            <p>&nbsp;&nbsp;Real Feel</p>
+                        </div>
+                        <h3>31&deg;C</h3>
+                    </div>
+
+                    <div class="air-conditions">
+                        <div class="head">
+                            <img src="images/humidity.png" alt="">
+                            <p>&nbsp;&nbsp;Humidity</p>
+                        </div>
+                        <h3>22</h3>
+                    </div>
+                </div>
+                <div class="condition">
+                    <div class="air-conditions">
+                        <div class="head">
+                            <img src="images/sunrise.png" alt="">
+                            <p>&nbsp;&nbsp;Sunrise</p>
+                        </div>
+                        <h3>6:17 AM</h3>
+                    </div>
+
+                    <div class="air-conditions">
+                        <div class="head">
+                            <img src="images/sunset-.png" alt="">
+                            <p>&nbsp;&nbsp;Sunset</p>
+                        </div>
+                        <h3>18:41 PM</h3>
+                    </div>
+                </div>
+                <div class="condition">
+                    <div class="air-conditions">
+                        <div class="head">
+                            <img src="images/wind.png" alt="">
+                            <p>&nbsp;&nbsp;Wind</p>
+                        </div>
+                        <h3>2.69 km/h</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="spinner">
+                <div class="spin"></div>
+            </div>
+        </div>
+
+
+        <div class="weather-forcast" id="forecast">
+            <div class="header">
+                <h2>7 Days Forecast</h2>
+            </div>
+            <div class="days">
+                <div class="day">
+                    <p>Today</p>
+                    <div class="day-icons">
+                        <img src="images/day-clear.png" alt="">
+                        <p>cloudy</p>
+                    </div>
+                    <p>31&deg;</p>
+                </div>
+
+                <div class="day">
+                    <p>MON</p>
+                    <div class="day-icons">
+                        <img src="images/day-clear.png" alt="">
+                        <p>Sunny</p>
+                    </div>
+                    <p>31&deg;</p>
+                </div>
+
+                <div class="day">
+                    <p>TUE</p>
+                    <div class="day-icons">
+                        <img src="images/day-clear.png" alt="">
+                        <p>Storm</p>
+                    </div>
+                    <p>31&deg;</p>
+                </div>
+
+                <div class="day">
+                    <p>WED</p>
+                    <div class="day-icons">
+                        <img src="images/day-clear.png" alt="">
+                        <p>Windy</p>
+                    </div>
+                    <p>31&deg;</p>
+                </div>
+
+                <div class="day">
+                    <p>THU</p>
+                    <div class="day-icons">
+                        <img src="images/day-clear.png" alt="">
+                        <p>Cloudy</p>
+                    </div>
+                    <p>31&deg;</p>
+                </div>
+
+                <div class="day">
+                    <p>FRI</p>
+                    <div class="day-icons">
+                        <img src="images/day-clear.png" alt="">
+                        <p>Sunny</p>
+                    </div>
+                    <p>31&deg;</p>
+                </div>
+
+                <div class="day">
+                    <p>SAT</p>
+                    <div class="day-icons">
+                        <img src="images/day-clear.png" alt="">
+                        <p>Windy</p>
+                    </div>
+                    <p>31&deg;</p>
+                </div>
+            </div>
+
+            <div class="spinner">
+                <div class="spin"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="JS/controller.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- <script type="module" src="JS/new-wave.js"></script> -->
+    <!-- <script type="module" src="JS/controller.js"></script> -->
+</head>
+
+<body>
+    <div class="video-container">
+        <!-- <video autoplay muted loop id="video-background">
+            <source src="waves-animation.mov" type="video/mp4">
+        </video> -->
+        <!-- Your other HTML content goes here -->
+    </div>
+
+    <div class="weather-container">
+        <div class="searchbar" id="search">
+            <div class="name">
+                <h1>WeatherVibes</h1>
+            </div>
+            <div class="search-space">
+                <div class="search-field">
+                    <input type="text" placeholder="Enter City" class="input-city">
+                </div>
+                <div class="search-button">
+                    <button class="search-city">Search</button>
+                </div>
+            </div>
+        </div>
+        <div class="weather-today" id="today">
+            <div class="weather--today-data">
+                <div class="text-data">
+                    <div class="city">
+                        <h1>Mumbai <span>SAT</span></h1>
+                    </div>
+                    <div class="temp">
+                        <h1>31&deg;C <span> &nbsp;&nbsp;clear</span></h1>
+                    </div>
+                </div>
+                <div class="image-data">
+                    <img src="images/day-clear.png" alt="">
+                </div>
+                <div class="min-max-temp">
+                    <h4>min temp :&nbsp;&nbsp; 27&deg;C</h4>
+                    <h4>max temp :&nbsp;&nbsp; 33&deg;C</h4>
+                </div>
+
+            </div>
+
+
+            <div class="weather--today-day">
+                <div class="day-time">
+                    <p>6:00 AM</p>
+                    <img src="images/day-clear.png" alt="">
+                    <p>23&deg;C</p>
+                </div>
+                <div class="day-time">
+                    <p>9:00 AM</p>
+                    <img src="images/day-clear.png" alt="">
+                    <p>27&deg;C</p>
+                </div>
+                <div class="day-time">
+                    <p>12:00 PM</p>
+                    <img src="images/day-clear.png" alt="">
+                    <p>30&deg;C</p>
+                </div>
+                <div class="day-time">
+                    <p>3:00 PM</p>
+                    <img src="images/day-clear.png" alt="">
+                    <p>29&deg;C</p>
+                </div>
+                <div class="day-time">
+                    <p>6:00 PM</p>
+                    <img src="images/day-clear.png" alt="">
+                    <p>27&deg;C</p>
+                </div>
+                <div class="day-time">
+                    <p>9:00 PM</p>
+                    <img src="images/day-clear.png" alt="">
+                    <p>23&deg;C</p>
+                </div>
+            </div>
+
+            <div class="data-display">
+                <div class="condition">
+                    <div class="air-conditions">
+                        <div class="head">
+                            <img src="images/temperature.png" alt="">
+                            <p>&nbsp;&nbsp;Real Feel</p>
+                        </div>
+                        <h3>31&deg;C</h3>
+                    </div>
+
+                    <div class="air-conditions">
+                        <div class="head">
+                            <img src="images/humidity.png" alt="">
+                            <p>&nbsp;&nbsp;Humidity</p>
+                        </div>
+                        <h3>22</h3>
+                    </div>
+                </div>
+                <div class="condition">
+                    <div class="air-conditions">
+                        <div class="head">
+                            <img src="images/sunrise.png" alt="">
+                            <p>&nbsp;&nbsp;Sunrise</p>
+                        </div>
+                        <h3>6:17 AM</h3>
+                    </div>
+
+                    <div class="air-conditions">
+                        <div class="head">
+                            <img src="images/sunset-.png" alt="">
+                            <p>&nbsp;&nbsp;Sunset</p>
+                        </div>
+                        <h3>18:41 PM</h3>
+                    </div>
+                </div>
+                <div class="condition">
+                    <div class="air-conditions">
+                        <div class="head">
+                            <img src="images/wind.png" alt="">
+                            <p>&nbsp;&nbsp;Wind</p>
+                        </div>
+                        <h3>2.69 km/h</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="spinner">
+                <div class="spin"></div>
+            </div>
+        </div>
+
+
+        <div class="weather-forcast" id="forecast">
+            <div class="header">
+                <h2>7 Days Forecast</h2>
+            </div>
+            <div class="days">
+                <div class="day">
+                    <p>Today</p>
+                    <div class="day-icons">
+                        <img src="images/day-clear.png" alt="">
+                        <p>cloudy</p>
+                    </div>
+                    <p>31&deg;</p>
+                </div>
+
+                <div class="day">
+                    <p>MON</p>
+                    <div class="day-icons">
+                        <img src="images/day-clear.png" alt="">
+                        <p>Sunny</p>
+                    </div>
+                    <p>31&deg;</p>
+                </div>
+
+                <div class="day">
+                    <p>TUE</p>
+                    <div class="day-icons">
+                        <img src="images/day-clear.png" alt="">
+                        <p>Storm</p>
+                    </div>
+                    <p>31&deg;</p>
+                </div>
+
+                <div class="day">
+                    <p>WED</p>
+                    <div class="day-icons">
+                        <img src="images/day-clear.png" alt="">
+                        <p>Windy</p>
+                    </div>
+                    <p>31&deg;</p>
+                </div>
+
+                <div class="day">
+                    <p>THU</p>
+                    <div class="day-icons">
+                        <img src="images/day-clear.png" alt="">
+                        <p>Cloudy</p>
+                    </div>
+                    <p>31&deg;</p>
+                </div>
+
+                <div class="day">
+                    <p>FRI</p>
+                    <div class="day-icons">
+                        <img src="images/day-clear.png" alt="">
+                        <p>Sunny</p>
+                    </div>
+                    <p>31&deg;</p>
+                </div>
+
+                <div class="day">
+                    <p>SAT</p>
+                    <div class="day-icons">
+                        <img src="images/day-clear.png" alt="">
+                        <p>Windy</p>
+                    </div>
+                    <p>31&deg;</p>
+                </div>
+            </div>
+
+            <div class="spinner">
+                <div class="spin"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="JS/controller.js"></script>
+</body>
+
+</html>

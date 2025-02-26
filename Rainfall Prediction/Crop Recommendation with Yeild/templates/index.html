@@ -1,0 +1,32 @@
+{% include "header.html" %}
+
+
+<video autoplay muted loop id="myVideo" class="background-video">
+   <source src="static/video/cropBackground.webm" type="video/mp4">
+</video>
+
+<div class="container heading">
+   <div class="row">
+      <div class="col-12">
+         <h1><b>Rainfall Prediction</b></h1>
+      </div>
+   </div><br><br><br><br>
+   
+   <div class="row">
+      <div class="col-12">
+         <a class="btn btn-outline-warning btn-lg" href="/rainfallPrediction"> Monthly RainFall Prediction</a>
+      </div>
+   </div>
+</div>
+ <br>
+ <center>
+<div class="row">
+   <div class="col-12">
+      <a href="/rain" class="btn btn-outline-warning btn-lg">Yearly Rainfall Prediction </a>
+   </div>
+</div>
+</center>
+</div>
+
+
+{% include "footer.html" %}

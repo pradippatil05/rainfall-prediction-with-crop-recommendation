@@ -1,0 +1,189 @@
+.navbar{
+   padding: 1rem;
+   padding-left: 2rem;
+}
+
+.navbar-brand{
+   font-size: 2rem;
+   font-weight: bold;
+}
+
+.background-video{
+   width: 100%;
+   height: 100vh;
+   position: absolute;
+   object-fit: cover;
+   top: 0;
+   left: 0;
+   z-index: -1;
+   background-size: cover;
+   filter: brightness(0.5);   
+}
+/* heading  */
+.heading{
+   color: white;
+   text-align: center;
+   justify-content: center;
+   margin-top:10%;
+}
+
+.heading button{
+   width: 100%;
+}
+
+@media screen and (min-width: 1000px) {
+   .navbar-nav{
+      margin-left: 30%;
+   }
+   
+   .nav-item{
+      padding-left: 2rem;
+   }
+   .heading{
+      
+      text-align: center;
+      justify-content: center;
+      margin-top:8%;
+   }
+   .heading button{
+      width: 15%;
+   }
+   .heading h1{
+      font-size: 2rem;
+   }
+   .heading p{
+      font-size: 1rem;
+   }
+}
+
+/* GEt crop data page */
+.get_crop_background{
+   width: 100%;
+   height: 55vh;
+   position: absolute;
+   object-fit: cover;
+   top: 0;
+   left: 0;
+   z-index: -1;
+   background-size: cover;
+   filter: brightness(0.5);
+}
+.get_property_heading{
+   
+   text-align: center;
+   
+   margin-bottom: 8%;
+}
+.get_property_heading h1{
+   margin-top: 10%;
+   font-size: 5.5rem;
+   color: white;
+}
+.get_property_container{
+   padding-left: 23%;
+   padding-right: 25%;
+   padding-bottom: 3%;
+}
+.get_property_container .row .form-group{
+   margin-top: 2%;
+}
+.get_property_container .row button{
+   justify-content: center;
+   text-align: center;
+   width: 100%;
+   margin-top: 2%;
+   /* margin-left:30%; */
+   margin-bottom: 2%;
+}
+.recommendation{
+   text-align: center;
+}
+.details{
+   padding: 2%;
+   margin-left: 15%;
+   width: 70%;
+}
+/* Map Page*/
+#map {
+  width: 100%;
+  height: 80vh;
+  margin-top: 2%;
+  margin-bottom: 2%; 
+  margin-left: 3%;
+   }
+
+.location-details{
+   margin-top: 10%;
+   margin-left: 15%;
+   width: 70%;
+}
+.location-heading h2{
+   margin-left: 1.5%;
+}
+/* .location-details-form{
+   padding-right:5%
+} */
+.location-details-form button{
+   margin-top: 2%;
+   width: 100%;
+}
+.result-table{
+   width: 40%;
+   padding-left: 2%;
+   margin-left: 2%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+body {
+  font-size: 20px;
+  color: #212529;
+  font-family: 'Lora', 'Times New Roman', serif;
+}
+
+.background-img{
+   width: 100%;
+   height: 65vh;
+   position: absolute;
+   object-fit: cover;
+   top: 0;
+   left: 0;
+   z-index: -1;
+   background-size: cover;
+   filter: brightness(0.5);   
+}
+
+.container-about{
+   margin-top: 12%;
+   padding-left: 10%;
+   padding-right: 10%;
+}
+.container-contact{
+   margin-top: 11%;
+    padding-left: 10%;
+   /* padding-right: 10%; */ 
+}
+.columns{
+   text-align: center;
+   width: 45%;
+   margin-right: 2%;
+   height: 50vh;
+   margin-bottom: 2%;
+}
+.about h1{
+   font-size: 5.5rem;
+}
+.contact h1{
+   font-size: 5.5rem;
+}
+.container-contact img{
+   height: 10vh;
+   margin-top: 1%;
+}

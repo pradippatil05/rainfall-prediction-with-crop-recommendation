@@ -1,0 +1,104 @@
+{% include "header.html" %}
+
+<div class="container predict-container border p-5">
+     <div class="row">
+      <img
+         src="static/images/Rainimg.jpg"
+         class="get_crop_background" alt="">
+      <div class="get_property_heading">
+         <h1>RainFall Prediction</h1>
+      </div>
+   </div>
+
+
+    <h1>Predict Rainfall</h1>
+    <form method="POST" action="/rain">
+        <div class="form-group">
+            <label for="Location">Select the State</label>
+            <select class="form-control" id="Location" name="Location" required>
+                 <option value="">State</option>
+                 <option value="ANDAMAN & NICOBAR ISLANDS">ANDAMAN & NICOBAR ISLANDS</option>
+                 <option value="ARUNACHAL PRADESH">ARUNACHAL PRADESH</option>
+                 <option value="ASSAM & MEGHALAYA">ASSAM & MEGHALAYA</option>
+                 <option value="NAGA MANI MIZO TRIPURA">NAGA MANI MIZO TRIPURA</option>
+                 <option value="SUB HIMALAYAN WEST BENGAL & SIKKIM">SUB HIMALAYAN WEST BENGAL & SIKKIM</option>
+                 <option value="GANGETIC WEST BENGAL">GANGETIC WEST BENGAL</option>
+                 <option value="ORISSA">ORISSA</option>
+                 <option value="JHARKHAND">JHARKHAND</option>
+                 <option value="BIHAR">BIHAR</option>
+                 <option value="EAST UTTAR PRADESH">EAST UTTAR PRADESH</option>
+                 <option value="WEST UTTAR PRADESH">WEST UTTAR PRADESH</option>
+                 <option value="UTTARAKHAND">UTTARAKHAND</option>
+                 <option value="HARYANA DELHI & CHANDIGARH">HARYANA DELHI & CHANDIGARH</option>
+                 <option value="PUNJAB">PUNJAB</option>
+                 <option value="HIMACHAL PRADESH">HIMACHAL PRADESH</option>
+                 <option value="JAMMU & KASHMIR">JAMMU & KASHMIR</option>
+                 <option value="WEST RAJASTHAN">WEST RAJASTHAN</option>
+                 <option value="EAST RAJASTHAN">EAST RAJASTHAN</option>
+                 <option value="WEST MADHYA PRADESH">WEST MADHYA PRADESH</option>
+                 <option value="EAST MADHYA PRADESH">EAST MADHYA PRADESH</option>
+                 <option value="GUJARAT REGION">GUJARAT REGION</option>
+                 <option value="SAURASHTRA & KUTCH">SAURASHTRA & KUTCH</option>
+                 <option value="KONKAN">KONKAN</option>
+                 <option value="MADHYA MAHARASHTRA">MADHYA MAHARASHTRA </option>
+                 <option value="MATATHWADA">MATATHWADA</option>
+                 <option value="VIDARBHA">VIDARBHA</option>
+                 <option value="CHHATTISGARH">CHHATTISGARH</option>
+                 <option value="COASTAL ANDHRA PRADESH">COASTAL ANDHRA PRADESH</option>
+                 <option value="TELANGANA">TELANGANA</option>
+                 <option value="RAYALSEEMA">RAYALSEEMA</option>
+                 <option value="TAMIL NADU">TAMIL NADU</option>
+                 <option value="COASTAL KARNATAKA">COASTAL KARNATAKA</option>
+                 <option value="NORTH INTERIOR KARNATAKA">NORTH INTERIOR KARNATAKA</option>
+                 <option value="SOUTH INTERIOR KARNATAKA">SOUTH INTERIOR KARNATAKA</option>
+                 <option value="KERALA">KERALA</option>
+                 <option value="LAKSHADWEEP">LAKSHADWEEP</option>
+             </select>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="year">Select a Year:</label>
+            <select id="year" class="form-control" name="year" required>
+                <option value="" selected disabled>Year</option>
+            </select>
+        </div>
+        <br>
+        <input type="submit" class="btn btn-primary" value="Submit">
+        
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            const startYear = 2000;
+            const endYear = 2050;
+            const selectYear = $('#year');
+
+            // Add options for the years from startYear to endYear
+            for (let year = startYear; year <= endYear; year++) {
+                selectYear.append($('<option>', {
+                    value: year,
+                    text: year
+                }));
+            }
+        });
+    </script>
+
+<script>
+    $(document).ready(function() {
+        $('form').submit(function(event) {
+            const locationValue = $('#Location').val();
+            const yearValue = $('#year').val();
+
+            // Check if Location or Year is empty
+            if (locationValue === '' || yearValue === '') {
+                alert('Please select both the State and Year.');
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+    });
+</script>
+
+
+
+{% include "footer.html" %}

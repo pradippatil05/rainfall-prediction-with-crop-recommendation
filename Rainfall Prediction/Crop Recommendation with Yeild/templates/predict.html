@@ -1,0 +1,113 @@
+{% include "header.html" %}
+
+<div class="container predict-container border p-5">
+     <div class="row">
+      <img
+         src="static/images/Rainimg.jpg"
+         class="get_crop_background" alt="">
+      <div class="get_property_heading">
+         <h1>RainFall Prediction</h1>
+      </div>
+   </div>
+
+   <div class="row">
+      <h1 class="fw-bolder">Predict The RainFall</h1>
+   </div>
+   
+       <form id="yearInput" action="/rainfallPrediction" method="POST">
+           <div class="form-group">
+               <label for="exampleInputPassword1">Select the Location </label>
+               <select class="form-control" name="Location" required>
+                    <option value="">Location</option>
+                    <option value="1">ANDAMAN & NICOBAR ISLANDS</option>
+                    <option value="2">ARUNACHAL PRADESH</option>
+                    <option value="3">ASSAM & MEGHALAYA</option>
+                    <option value="4">NAGA MANI MIZO TRIPURA</option>
+                    <option value="5">SUB HIMALAYAN WEST BENGAL & SIKKIM</option>
+                    <option value="6">GANGETIC WEST BENGAL</option>
+                    <option value="7">ORISSA</option>
+                    <option value="8">JHARKHAND</option>
+                    <option value="9">BIHAR</option>
+                    <option value="10">EAST UTTAR PRADESH</option>
+                    <option value="11">WEST UTTAR PRADESH</option>
+                    <option value="12">UTTARAKHAND</option>
+                    <option value="13">HARYANA DELHI & CHANDIGARH</option>
+                    <option value="14">PUNJAB</option>
+                    <option value="15">HIMACHAL PRADESH</option>
+                    <option value="16">JAMMU & KASHMIR</option>
+                    <option value="17">WEST RAJASTHAN</option>
+                    <option value="18">EAST RAJASTHAN</option>
+                    <option value="19">WEST MADHYA PRADESH</option>
+                    <option value="20">EAST MADHYA PRADESH</option>
+                    <option value="21">GUJARAT REGION</option>
+                    <option value="22">SAURASHTRA & KUTCH</option>
+                    <option value="23">KONKAN</option>
+                    <option value="24">MADHYA MAHARASHTRA </option>
+                    <option value="25">MATATHWADA</option>
+                    <option value="26">VIDARBHA</option>
+                    <option value="27">CHHATTISGARH</option>
+                    <option value="28">COASTAL ANDHRA PRADESH</option>
+                    <option value="29">TELANGANA</option>
+                    <option value="30">RAYALSEEMA</option>
+                    <option value="31">TAMIL NADU</option>
+                    <option value="32">COASTAL KARNATAKA</option>
+                    <option value="33">NORTH INTERIOR KARNATAKA</option>
+                    <option value="34">SOUTH INTERIOR KARNATAKA</option>
+                    <option value="35">KERALA</option>
+                    <option value="36">LAKSHADWEEP</option>
+         </select>
+               
+           </div><br>
+           <div class="form-group">
+               <label for="year">Search Year</label>
+               <select id="year" class="form-control" name="year" required>
+                <option value="" selected disabled>Year</option>
+            </select>
+           </div><br>
+
+           <div class="form-group">
+               <label for="exampleInputPassword1">Select the Month</label>
+               <select class="form-control" name="Month" required>
+                    <option value="">Month</option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+               </select>
+           </div><br>
+           <button type="submit" class="btn btn-primary">Submit</button>
+           
+       </form><br>
+   
+       
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        const startYear = 2000;
+        const endYear = 2050;
+        const selectYear = $('#year');
+
+        // Add options for the years from startYear to endYear
+        for (let year = startYear; year <= endYear; year++) {
+            selectYear.append($('<option>', {
+                value: year,
+                text: year
+            }));
+        }
+    });
+</script>
+   
+
+
+</div>
+
+{% include "footer.html" %}

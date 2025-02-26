@@ -1,0 +1,90 @@
+{% include "header.html" %}
+
+
+<div class="container-fluid get_property_container">
+   <div class="row">
+      <img
+         src="static/images/crop.jpg"
+         class="get_crop_background" alt="">
+      <div class="get_property_heading">
+         <h1>Soil Properties</h1>
+      </div>
+   </div>
+   {% if result: %}
+   <div class="row recommendation border shadow p-3 mb-5 bg-white rounded">
+      <h2 class="">Recommended Crop : {{crop.upper()}}</h2>
+      <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="https://en.wikipedia.org/wiki/{{crop}}">
+        For More About {{crop.upper()}}
+      </a>
+    </div>
+    {% endif %}
+   <div class="row details border shadow p-3 mb-5 bg-white rounded">
+      <form id="myForm" action="/get_soil_data" method="POST" onsubmit="return validateForm()">
+         <div class="form-group">
+            <label for="exampleInputEmail1">Enter Nitrogen in the soil (Range 1-100 ppm)</label>
+            <input type="number" class="form-control" id="n" aria-describedby="emailHelp" name="n" min="1" max="100" required>
+         </div>
+         <div class="form-group">
+            <label for="exampleInputEmail1"> Enter Phosphorus in the soil (Range 1-100 ppm)</label>
+            <input type="number" class="form-control" id="p" aria-describedby="emailHelp" name="p" min="1" max="100" required>
+         </div>
+         <div class="form-group">
+            <label for="exampleInputEmail1">Enter potassium in the soil (Range 1-100 ppm)</label>
+            <input type="number" class="form-control" id="k" aria-describedby="emailHelp" name="k" min="1" max="100" required>
+         </div>
+         <div class="form-group">
+            <label for="exampleInputEmail1">Enter the temperature (Range 1-50 Celsius)</label>
+            <input type="number" class="form-control" id="temp" aria-describedby="emailHelp" name="temp" min="1" max="50" required>
+         </div>
+         <div class="form-group">
+            <label for="exampleInputEmail1">Enter the humidity (Range 1-100 RH)</label>
+            <input type="number" class="form-control" id="humidity" aria-describedby="emailHelp" name="humidity" min="1" max="100" required>
+         </div>
+         <div class="form-group">
+            <label for="exampleInputEmail1">Enter the PH Level (Range 0-14)</label>
+            <input type="number" class="form-control" id="ph" aria-describedby="emailHelp" name="ph" min="0" max="14" required>
+         </div>
+         <div class="form-group">
+            <label for="exampleInputEmail1">Enter the RainFall (Range 0-300 mm)</label>
+            <input type="number" class="form-control" id="rainfall" aria-describedby="emailHelp" name="RainFall" min="0" max="300" required>
+         </div>
+         <button type="submit" class="btn btn-primary">Submit</button>
+         
+      </form>
+      
+      <script>
+         function validateForm() {
+            let n = document.getElementById("n").value;
+            let p = document.getElementById("p").value;
+            let k = document.getElementById("k").value;
+            let temp = document.getElementById("temp").value;
+            let humidity = document.getElementById("humidity").value;
+            let ph = document.getElementById("ph").value;
+            let rainfall = document.getElementById("rainfall").value;
+      
+            if (ph < 0 || ph > 14) {
+               alert("PH Level must be between 0 and 14");
+               return false;
+            }
+      
+            if (rainfall < 0 || rainfall > 300) {
+               alert("Rainfall must be between 0 and 300");
+               return false;
+            }
+      
+            if (n < 1 || n > 100 || p < 1 || p > 100 || k < 1 || k > 100 || temp < 1 || temp > 100 || humidity < 1 || humidity > 100) {
+               alert("parameters must be between 1 and 100");
+               return false;
+            }
+      
+            return true;
+         }
+      </script>
+      
+  
+</div>
+<script>
+   const navEl = document.querySelector('.navbar');
+   navEl.classList.add('navbar-dark');
+</script>
+{% include "footer.html" %}
